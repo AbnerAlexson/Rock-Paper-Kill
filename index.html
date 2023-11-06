@@ -7,7 +7,15 @@
     <body>
         <script>
 
-            const userSelection = prompt('Type "rock", "paper" or "scissor" only: ')
+            let userSelection;
+            function reDeclare() {
+                for (let i = 0; i < 5; i++) {
+                    userSelection = prompt('Type "rock", "paper" or "scissor" only: ')
+                }
+            }
+
+            reDeclare()
+
             const computerSelection = getComputerInput()
 
             function getComputerInput() {
@@ -21,9 +29,12 @@
                 };
             }
 
+
+
             function playRound(userSelection, computerSelection) {
+                console.log
                 let UserSelection = userSelection.toLowerCase();
-                (UserSelection === computerSelection) ? alert("tie")
+                (UserSelection === computerSelection) ? console.log("tie")
                 : (UserSelection == "rock" && computerSelection == "paper") ? console.log("You lost, Paper beats Rock!")
                 : (UserSelection == "rock" && computerSelection == "scissor") ? console.log("You won, Rock beats Scissor!")
                 : (UserSelection == "paper" && computerSelection == "rock") ? console.log("You won, Paper beats Rock!")
@@ -33,8 +44,6 @@
                 : console.log("NOT ROCK PAPER SCISSOR TRY AGAIN YOU MORON!");
             }
 
-
-            playRound(userSelection, computerSelection);
         
         </script>
     </body>
