@@ -6,18 +6,34 @@
     </head>
     <body>
         <script>
+
+            const userSelection = "Scissor"
+            const computerSelection = getComputerInput()
+
             function getComputerInput() {
                 let i = Math.floor(Math.random() * 3) + 1;
                 if (i === 1) {
-                    return "Rock";
+                    return "rock";
                 } else if (i === 2) {
-                    return "Paper";
+                    return "paper";
                 } else {
-                    return "Scissor";
+                    return "scissor";
                 };
             }
 
-           console.log(getComputerInput());
+            function playRound(userSelection, computerSelection) {
+                let UserSelection = userSelection.toLowerCase();
+                (userSelection === computerSelection) ? console.log("tie")
+                : (userSelection == "rock" && computerSelection == "paper") ? console.log("You lost, Paper beats Rock!")
+                : (userSelection == "rock" && computerSelection == "scissor") ? console.log("You won, Rock beats Scissor!")
+                : (userSelection == "paper" && computerSelection == "rock") ? console.log("You won, Paper beats Rock!")
+                : (userSelection == "paper" && computerSelection == "scissor") ? console.log("You lost, Scissor beats Paper!")
+                : (userSelection == "scissor" && computerSelection == "rock") ? console.log("You lost, Rock beats Scissor!")
+                : console.log("You won, Scissor beats Paper!");
+            }
+
+            playRound()
+        
         </script>
     </body>
 </html>
