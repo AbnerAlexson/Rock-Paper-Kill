@@ -23,16 +23,18 @@
 
             function playRound(userSelection, computerSelection) {
                 let UserSelection = userSelection.toLowerCase();
-                (userSelection === computerSelection) ? console.log("tie")
-                : (userSelection == "rock" && computerSelection == "paper") ? console.log("You lost, Paper beats Rock!")
-                : (userSelection == "rock" && computerSelection == "scissor") ? console.log("You won, Rock beats Scissor!")
-                : (userSelection == "paper" && computerSelection == "rock") ? console.log("You won, Paper beats Rock!")
-                : (userSelection == "paper" && computerSelection == "scissor") ? console.log("You lost, Scissor beats Paper!")
-                : (userSelection == "scissor" && computerSelection == "rock") ? console.log("You lost, Rock beats Scissor!")
-                : console.log("You won, Scissor beats Paper!");
+                (UserSelection === computerSelection) ? alert("tie")
+                : (UserSelection == "rock" && computerSelection == "paper") ? console.log("You lost, Paper beats Rock!")
+                : (UserSelection == "rock" && computerSelection == "scissor") ? console.log("You won, Rock beats Scissor!")
+                : (UserSelection == "paper" && computerSelection == "rock") ? console.log("You won, Paper beats Rock!")
+                : (UserSelection == "paper" && computerSelection == "scissor") ? console.log("You lost, Scissor beats Paper!")
+                : (UserSelection == "scissor" && computerSelection == "rock") ? console.log("You lost, Rock beats Scissor!")
+                : (UserSelection == "scissor" && computerSelection == "paper") ? console.log("You won, Scissor beats Paper!")
+                : console.log("NOT ROCK PAPER SCISSOR TRY AGAIN YOU MORON!");
             }
 
-            playRound()
+
+            playRound(userSelection, computerSelection);
         
         </script>
     </body>
