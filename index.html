@@ -8,13 +8,16 @@
         <script>
 
             let userSelection;
-            const computerSelection;
-            
-            function redeclareUserPrompt() {
-                for (let i = 0; i < 5; i++) {
-                    userSelection = prompt('Type "rock", "paper" or "scissor" only: ')
-                }
+            let computerSelection;
+
+            function declareUserPrompt() {
+                userSelection = prompt('Type "rock", "paper" or "scissor" only: ')
             }
+
+            function declareCompSelection() {
+                computerSelection = getComputerInput();
+            }
+            
 
             function getComputerInput() {
                 let i = Math.floor(Math.random() * 3) + 1;
@@ -27,30 +30,38 @@
                 };
             }
 
-
+            let UserSelection;
+            let userScore = 0;
+            let compScore = 0;
 
             function playRound(userSelection, computerSelection) {
-                console.log
-                let UserSelection = userSelection.toLowerCase();
-                (UserSelection === computerSelection) ? console.log("tie")
-                : (UserSelection == "rock" && computerSelection == "paper") ? console.log("You lost, Paper beats Rock!")
-                : (UserSelection == "rock" && computerSelection == "scissor") ? console.log("You won, Rock beats Scissor!")
-                : (UserSelection == "paper" && computerSelection == "rock") ? console.log("You won, Paper beats Rock!")
-                : (UserSelection == "paper" && computerSelection == "scissor") ? console.log("You lost, Scissor beats Paper!")
-                : (UserSelection == "scissor" && computerSelection == "rock") ? console.log("You lost, Rock beats Scissor!")
-                : (UserSelection == "scissor" && computerSelection == "paper") ? console.log("You won, Scissor beats Paper!")
-                : console.log("NOT ROCK PAPER SCISSOR TRY AGAIN YOU MORON!");
+                UserSelection = userSelection.toLowerCase();
+                if (userSelection === computerSelection) {
+                    console.log("tie");
+                } else if (userSelection == "rock" && computerSelection == "paper") {
+                    compScore += 1;
+                    console.log("You lost, Paper beats Rock!");
+                } else if (userSelection == "rock" && computerSelection == "scissor") {
+                    userScore += 1;
+                    console.log("You won, Rock beats Scissor!");
+                } else if (UserSelection == "paper" && computerSelection == "rock") {
+                    userScore += 1;
+                    console.log("You won, Paper beats Rock!");
+                } else if (UserSelection == "paper" && computerSelection == "scissor") {
+                    compScore += 1;
+                    console.log("You lost, Scissor beats Paper!");
+                } else if (UserSelection == "scissor" && computerSelection == "rock") {
+                    compScore += 1;
+                    console.log("You lost, Rock beats Scissor!");
+                } else if (UserSelection == "scissor" && computerSelection == "paper") {
+                    userScore += 1;
+                    console.log("You won, Scissor beats Paper!");
+                } else {
+                    console.log("NOT ROCK PAPER SCISSOR TRY AGAIN YOU MORON!");
+                }
             }
 
-            function game() [
-                for (let i = 1; i < 5; i++;) {
 
-                }
-            ]
-
-
-
-        
         </script>
     </body>
 </html>
