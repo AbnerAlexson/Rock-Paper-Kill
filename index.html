@@ -34,31 +34,44 @@
             let userScore = 0;
             let compScore = 0;
 
-            function playRound(userSelection, computerSelection) {
-                UserSelection = userSelection.toLowerCase();
-                if (userSelection === computerSelection) {
+            function playRound(user, computer) {
+                UserSelection = user.toLowerCase();
+                if (userSelection === computer) {
                     console.log("tie");
-                } else if (userSelection == "rock" && computerSelection == "paper") {
+                } else if (userSelection == "rock" && computer == "paper") {
                     compScore += 1;
                     console.log("You lost, Paper beats Rock!");
-                } else if (userSelection == "rock" && computerSelection == "scissor") {
+                } else if (userSelection == "rock" && computer == "scissor") {
                     userScore += 1;
                     console.log("You won, Rock beats Scissor!");
-                } else if (UserSelection == "paper" && computerSelection == "rock") {
+                } else if (UserSelection == "paper" && compute == "rock") {
                     userScore += 1;
                     console.log("You won, Paper beats Rock!");
-                } else if (UserSelection == "paper" && computerSelection == "scissor") {
+                } else if (UserSelection == "paper" && computer == "scissor") {
                     compScore += 1;
                     console.log("You lost, Scissor beats Paper!");
-                } else if (UserSelection == "scissor" && computerSelection == "rock") {
+                } else if (UserSelection == "scissor" && computer == "rock") {
                     compScore += 1;
                     console.log("You lost, Rock beats Scissor!");
-                } else if (UserSelection == "scissor" && computerSelection == "paper") {
+                } else if (UserSelection == "scissor" && computer == "paper") {
                     userScore += 1;
                     console.log("You won, Scissor beats Paper!");
                 } else {
                     console.log("NOT ROCK PAPER SCISSOR TRY AGAIN YOU MORON!");
                 }
+            }
+            
+            declareUserPrompt();
+            declareCompSelection();
+            playRound(userSelection, computerSelection);
+
+
+            function game() {
+                while (userScore < 3 || compScore < 3) {
+                    declareUserPrompt();
+                    declareCompSelection();
+                    playRound(userSelection, computerSelection);
+               }
             }
 
 
