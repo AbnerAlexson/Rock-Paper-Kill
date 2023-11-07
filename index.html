@@ -40,22 +40,22 @@
                     console.log("tie");
                 } else if (userSelection == "rock" && computer == "paper") {
                     compScore += 1;
-                    console.log("You lost, Paper beats Rock!");
+                    console.log("You lost the round, Paper beats Rock!");
                 } else if (userSelection == "rock" && computer == "scissor") {
                     userScore += 1;
-                    console.log("You won, Rock beats Scissor!");
-                } else if (UserSelection == "paper" && compute == "rock") {
+                    console.log("You won the round, Rock beats Scissor!");
+                } else if (UserSelection == "paper" && computer == "rock") {
                     userScore += 1;
-                    console.log("You won, Paper beats Rock!");
+                    console.log("You won the round, Paper beats Rock!");
                 } else if (UserSelection == "paper" && computer == "scissor") {
                     compScore += 1;
-                    console.log("You lost, Scissor beats Paper!");
+                    console.log("You lost the round, Scissor beats Paper!");
                 } else if (UserSelection == "scissor" && computer == "rock") {
                     compScore += 1;
-                    console.log("You lost, Rock beats Scissor!");
+                    console.log("You lost the round, Rock beats Scissor!");
                 } else if (UserSelection == "scissor" && computer == "paper") {
                     userScore += 1;
-                    console.log("You won, Scissor beats Paper!");
+                    console.log("You won the round, Scissor beats Paper!");
                 } else {
                     console.log("NOT ROCK PAPER SCISSOR TRY AGAIN YOU MORON!");
                 }
@@ -71,8 +71,17 @@
                     declareUserPrompt();
                     declareCompSelection();
                     playRound(userSelection, computerSelection);
+                    if (userScore == 3) {
+                        console.log("You've won the game! Congratulation")
+                        break;
+                    } else if (compScore == 3) {
+                        console.log("You've lost the game! Go kill yourself")
+                        break;
+                    }
                }
             }
+
+            game()
 
 
         </script>
