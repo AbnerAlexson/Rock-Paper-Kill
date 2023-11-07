@@ -8,15 +8,13 @@
         <script>
 
             let userSelection;
-            function reDeclare() {
+            const computerSelection;
+            
+            function redeclareUserPrompt() {
                 for (let i = 0; i < 5; i++) {
                     userSelection = prompt('Type "rock", "paper" or "scissor" only: ')
                 }
             }
-
-            reDeclare()
-
-            const computerSelection = getComputerInput()
 
             function getComputerInput() {
                 let i = Math.floor(Math.random() * 3) + 1;
@@ -43,6 +41,14 @@
                 : (UserSelection == "scissor" && computerSelection == "paper") ? console.log("You won, Scissor beats Paper!")
                 : console.log("NOT ROCK PAPER SCISSOR TRY AGAIN YOU MORON!");
             }
+
+            function game() [
+                for (let i = 1; i < 5; i++;) {
+
+                }
+            ]
+
+
 
         
         </script>
