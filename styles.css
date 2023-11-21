@@ -1,3 +1,10 @@
 * {
     font-family: 'Nanum Gothic', sans-serif;
 }
+
+body {
+    background: url(/img/pexels-philipp-martin-18274746.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
