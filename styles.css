@@ -28,6 +28,7 @@ body {
     margin: 70px auto 0 auto;
     border-radius: 13px;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
